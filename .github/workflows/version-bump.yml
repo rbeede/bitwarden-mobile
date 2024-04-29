@@ -204,9 +204,3 @@ jobs:
       - name: Commit files
         if: ${{ steps.version-changed.outputs.changes_to_commit == 'TRUE' }}
         run: git commit -m "Bumped version to ${{ steps.set-final-version-output.outputs.version }}" -a
-
-      - name: Push changes
-        if: ${{ steps.version-changed.outputs.changes_to_commit == 'TRUE' }}
-        env:
-          PR_BRANCH: ${{ steps.create-branch.outputs.name }}
-        run: git push -u origin $PR_BRANCH
