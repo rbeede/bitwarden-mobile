@@ -45,8 +45,8 @@ jobs:
           access_token: ${{ steps.retrieve-secrets.outputs.vgrassia-test-sm }}
           base_url: https://vault.qa.bitwarden.pw
           secrets: |
-            c8f4cc39-a958-4fbc-911f-b15d0147f3ca > GITHUB_GPG_PRIVATE_KEY
-            2bd2963c-dafb-4f5a-8e3e-b15d01483506 > GITHUB_GPG_PRIVATE_KEY_PASSPHRASE
+            c68b1e1a-39dd-4ec3-8100-b162014c5547 > GITHUB_GPG_PRIVATE_KEY
+            5abf54d0-c8a7-4842-9abf-b162014c701e > GITHUB_GPG_PRIVATE_KEY_PASSPHRASE
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@01dd5d3ca463c7f10f7f4f7b4f177225ac661ee4 # v6.1.0
