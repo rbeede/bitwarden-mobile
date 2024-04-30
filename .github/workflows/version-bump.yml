@@ -43,7 +43,7 @@ jobs:
         uses: bitwarden/sm-action@92d1d6a4f26a89a8191c83ab531a53544578f182 # v2.0.0
         with:
           access_token: ${{ steps.retrieve-secrets.outputs.vgrassia-test-sm }}
-          base_url: https://vault.qa.bitwarden.pw
+          base_url: https://vgrassia.sh.bitwarden.pw
           secrets: |
             c68b1e1a-39dd-4ec3-8100-b162014c5547 > GITHUB_GPG_PRIVATE_KEY
             5abf54d0-c8a7-4842-9abf-b162014c701e > GITHUB_GPG_PRIVATE_KEY_PASSPHRASE
