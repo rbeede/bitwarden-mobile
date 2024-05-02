@@ -107,6 +107,15 @@ jobs:
           perl -0777 -pi.bak -e 's/<key>aps-environment<\/key>\s*<string>development<\/string>/<key>aps-environment<\/key>\n\t<string>production<\/string>/' ./src/iOS/Entitlements.plist
         shell: bash
 
+      - name: Get certificates
+        run: |
+          mkdir -p $HOME/certificates
+          az keyvault secret show --id https://bitwarden-ci.vault.azure.net/certificates/ios-distribution |
+            jq -r .value | base64 -d > $HOME/certificates/ios-distribution.p12
+
+          cd $HOME/certificates
+          mv ios-distribution.p12 $HOME/secrets/iphone-distribution-cert.p12
+
       - name: Set up Keychain
         env:
           KEYCHAIN_PASSWORD: ${{ secrets.IOS_KEYCHAIN_PASSWORD }}
