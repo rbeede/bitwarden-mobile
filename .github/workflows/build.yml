@@ -39,6 +39,13 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_KV_CI_SERVICE_PRINCIPAL }}
 
+      - name: Retrieve secrets
+        id: retrieve-secrets
+        uses: bitwarden/gh-actions/get-keyvault-secrets@main
+        with:
+          keyvault: "bitwarden-ci"
+          secrets: "appcenter-ios-token"
+
       - name: Download Provisioning Profiles secrets
         env:
           ACCOUNT_NAME: bitwardenci
@@ -209,13 +216,6 @@ jobs:
           cp -r -v $WATCH_ARCHIVE_DSYMS_PATH $WATCH_DSYMS_EXPORT_PATH
         shell: bash
 
-      - name: TEST
-        run: |
-          pwd
-          ls -alh
-          echo "*****"
-          ls -alh bitwarden-export
-
       - name: Upload App Store .ipa & dSYMs artifacts
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
         with:
@@ -224,36 +224,6 @@ jobs:
             ./bitwarden-export/Bitwarden.ipa
             ./bitwarden-export/dSYMs/*.*
           if-no-files-found: error
-
-  ios-upload:
-    name: Apple iOS Upload
-    runs-on: macos-12
-    needs: ios
-    steps:
-      - name: Login to Azure - CI Subscription
-        uses: Azure/login@1f63701bf3e6892515f1b7ce2d2bf1708b46beaf # v1.4.3
-        with:
-          creds: ${{ secrets.AZURE_KV_CI_SERVICE_PRINCIPAL }}
-
-      - name: Retrieve secrets
-        id: retrieve-secrets
-        uses: bitwarden/gh-actions/get-keyvault-secrets@main
-        with:
-          keyvault: "bitwarden-ci"
-          secrets: "appcenter-ios-token"
-
-      - name: Download App Store .ipa & dSYMs artifacts
-        uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e # v4.1.7
-        with:
-          name: Bitwarden iOS
-          path: ./bitwarden-export
-
-      - name: TEST
-        run: |
-          pwd
-          ls -alh
-          echo "*****"
-          ls -alh bitwarden-export
 
       - name: Install AppCenter CLI
         run: npm install -g appcenter-cli
