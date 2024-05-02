@@ -146,18 +146,12 @@ namespace Bit.App.Pages
                           "ssoToken=" + Uri.EscapeDataString(ssoToken);
 
                 WebAuthenticatorResult authResult = null;
-<<<<<<< HEAD
-
-                authResult = await WebAuthenticator.AuthenticateAsync(new Uri(url),
-                    new Uri(REDIRECT_URI));
-=======
                 authResult = await WebAuthenticator.AuthenticateAsync(new WebAuthenticatorOptions()
                 {
                     CallbackUrl = new Uri(REDIRECT_URI),
                     Url = new Uri(url),
                     PrefersEphemeralWebBrowserSession = _useEphemeralWebBrowserSession,
                 });
->>>>>>> v2023.9.0
 
                 var code = GetResultCode(authResult, state);
                 if (!string.IsNullOrEmpty(code))

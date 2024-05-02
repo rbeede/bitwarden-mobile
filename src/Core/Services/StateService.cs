@@ -1527,11 +1527,7 @@ namespace Bit.Core.Services
                 SetLastActiveTimeAsync(null, userId),
                 SetPreviousPageInfoAsync(null, userId),
                 SetInvalidUnlockAttemptsAsync(null, userId),
-<<<<<<< HEAD
-                SetLocalDataAsync(null, userId),
-=======
                 SetCiphersLocalDataAsync(null, userId),
->>>>>>> v2023.9.0
                 SetEncryptedCiphersAsync(null, userId),
                 SetEncryptedCollectionsAsync(null, userId),
                 SetLastSyncAsync(null, userId),

@@ -465,10 +465,7 @@ namespace Bit.Core.Services
                 Code = code;
                 CodeVerifier = codeVerifier;
                 SsoRedirectUrl = redirectUrl;
-<<<<<<< HEAD
-=======
                 SsoEmail2FaSessionToken = response.TwoFactorResponse.SsoEmail2faSessionToken;
->>>>>>> v2023.9.0
                 _masterKey = _setCryptoKeys ? masterKey : null;
                 _userKey = userKey2FA;
                 TwoFactorProvidersData = response.TwoFactorResponse.TwoFactorProviders2;
