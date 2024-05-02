@@ -209,6 +209,13 @@ jobs:
           cp -r -v $WATCH_ARCHIVE_DSYMS_PATH $WATCH_DSYMS_EXPORT_PATH
         shell: bash
 
+      - name: TEST
+        run: |
+          pwd
+          ls -alh
+          echo "*****"
+          ls -alh bitwarden-export
+
       - name: Upload App Store .ipa & dSYMs artifacts
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
         with:
@@ -247,7 +254,6 @@ jobs:
           ls -alh
           echo "*****"
           ls -alh bitwarden-export
-          exit 1
 
       - name: Install AppCenter CLI
         run: npm install -g appcenter-cli
