@@ -21,6 +21,11 @@ jobs:
         with:
           nuget-version: 5.9.0
 
+      - name: Install Xamarin
+        run: |
+          brew install --cask xamarin-ios
+          brew install --cask xamarin-android
+
       - name: Print environment
         run: |
           nuget help | grep Version
