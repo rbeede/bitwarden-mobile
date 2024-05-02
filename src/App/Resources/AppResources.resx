@@ -2414,9 +2414,9 @@ select Add TOTP to store the key safely</value>
   <data name="Service" xml:space="preserve">
     <value>Service</value>
   </data>
-  <data name="AnonAddy" xml:space="preserve">
-    <value>AnonAddy</value>
-    <comment>"AnonAddy" is the product name and should not be translated.</comment>
+  <data name="AddyIo" xml:space="preserve">
+    <value>addy.io</value>
+    <comment>"addy.io" is the product name and should not be translated.</comment>
   </data>
   <data name="FirefoxRelay" xml:space="preserve">
     <value>Firefox Relay</value>
@@ -2678,7 +2678,7 @@ Do you want to switch to this account?</value>
     <value>Master password re-prompt help</value>
   </data>
   <data name="UnlockingMayFailDueToInsufficientMemoryDecreaseYourKDFMemorySettingsToResolve" xml:space="preserve">
-    <value>Unlocking may fail due to insufficient memory. Decrease your KDF memory settings to resolve.</value>
+    <value>Unlocking may fail due to insufficient memory. Decrease your KDF memory settings or set up biometric unlock to resolve.</value>
   </data>
   <data name="InvalidAPIKey" xml:space="preserve">
     <value>Invalid API key</value>

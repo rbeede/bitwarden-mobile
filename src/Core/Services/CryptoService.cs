@@ -700,10 +700,26 @@ namespace Bit.Core.Services
             return new EncByteArray(encBytes);
         }
 
+<<<<<<< HEAD
         // --HELPER METHODS--
 
         private async Task StoreAdditionalKeysAsync(UserKey userKey, string userId = null)
         {
+=======
+        public async Task<MasterKey> GetOrDeriveMasterKeyAsync(string password, string userId = null)
+        {
+            var masterKey = await GetMasterKeyAsync(userId);
+            return masterKey ?? await this.MakeMasterKeyAsync(
+                password,
+                await _stateService.GetEmailAsync(userId),
+                await _stateService.GetActiveUserCustomDataAsync(a => new KdfConfig(a?.Profile)));
+        }
+
+        // --HELPER METHODS--
+
+        private async Task StoreAdditionalKeysAsync(UserKey userKey, string userId = null)
+        {
+>>>>>>> v2023.9.0
             // Set, refresh, or clear the pin key
             if (await _stateService.GetProtectedPinAsync(userId) != null)
             {

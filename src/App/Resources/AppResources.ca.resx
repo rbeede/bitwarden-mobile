@@ -2413,9 +2413,9 @@ seleccioneu Afegeix TOTP per emmagatzemar la clau de manera segura</value>
   <data name="Service" xml:space="preserve">
     <value>Servei</value>
   </data>
-  <data name="AnonAddy" xml:space="preserve">
-    <value>AnonAddy</value>
-    <comment>"AnonAddy" is the product name and should not be translated.</comment>
+  <data name="AddyIo" xml:space="preserve">
+    <value>addy.io</value>
+    <comment>"addy.io" is the product name and should not be translated.</comment>
   </data>
   <data name="FirefoxRelay" xml:space="preserve">
     <value>Firefox Relay</value>
@@ -2627,6 +2627,24 @@ Voleu canviar a aquest compte?</value>
   <data name="CurrentMasterPassword" xml:space="preserve">
     <value>Contrasenya mestra actual</value>
   </data>
+  <data name="LoggedIn" xml:space="preserve">
+    <value>Connectat!</value>
+  </data>
+  <data name="ApproveWithMyOtherDevice" xml:space="preserve">
+    <value>Aproveu des d'un altre dispositiu vostre</value>
+  </data>
+  <data name="RequestAdminApproval" xml:space="preserve">
+    <value>Sol·liciteu l'aprovació de l'administrador</value>
+  </data>
+  <data name="ApproveWithMasterPassword" xml:space="preserve">
+    <value>Aprova amb contrasenya mestra</value>
+  </data>
+  <data name="TurnOffUsingPublicDevice" xml:space="preserve">
+    <value>Apagueu amb un dispositiu públic</value>
+  </data>
+  <data name="RememberThisDevice" xml:space="preserve">
+    <value>Recorda aquest dispositiu</value>
+  </data>
   <data name="Passkey" xml:space="preserve">
     <value>Clau de pas</value>
   </data>
@@ -2659,13 +2677,31 @@ Voleu canviar a aquest compte?</value>
     <value>Ajuda per tornar a demanar la contrasenya mestra</value>
   </data>
   <data name="UnlockingMayFailDueToInsufficientMemoryDecreaseYourKDFMemorySettingsToResolve" xml:space="preserve">
-    <value>El desbloqueig pot fallar a causa de memòria insuficient. Disminueix la configuració de memòria KDF per resoldre-ho</value>
+    <value>El desbloqueig pot fallar a causa de memòria insuficient. Disminueix la configuració de memòria KDF per resoldre-ho.</value>
   </data>
   <data name="InvalidAPIKey" xml:space="preserve">
     <value>Clau API no vàlida</value>
   </data>
   <data name="InvalidAPIToken" xml:space="preserve">
     <value>Token API no vàlid</value>
+  </data>
+  <data name="AdminApprovalRequested" xml:space="preserve">
+    <value>S'ha sol·licitat l'aprovació de l'administrador</value>
+  </data>
+  <data name="YourRequestHasBeenSentToYourAdmin" xml:space="preserve">
+    <value>La vostra sol·licitud s'ha enviat a l'administrador.</value>
+  </data>
+  <data name="YouWillBeNotifiedOnceApproved" xml:space="preserve">
+    <value>Se us notificarà una vegada aprovat. </value>
+  </data>
+  <data name="TroubleLoggingIn" xml:space="preserve">
+    <value>Teniu problemes per iniciar la sessió?</value>
+  </data>
+  <data name="LoggingInAsX" xml:space="preserve">
+    <value>Connectat com {0}</value>
+  </data>
+  <data name="VaultTimeoutActionChangedToLogOut" xml:space="preserve">
+    <value>L'acció de temps d'espera de la caixa forta ha canviat per tancar la sessió</value>
   </data>
   <data name="ThisItemCannotBeSharedWithTheOrganizationBecauseThereIsOneAlreadyWithTheSamePasskey" xml:space="preserve">
     <value>Aquest element no es pot compartir amb l'organització perquè ja n'hi ha un amb la mateixa clau de pas.</value>
@@ -2712,5 +2748,17 @@ Voleu canviar a aquest compte?</value>
   </data>
   <data name="CannotEditMultipleURIsAtOnce" xml:space="preserve">
     <value>No es poden editar diversos URI alhora</value>
+  </data>
+  <data name="LoginApproved" xml:space="preserve">
+    <value>S'ha aprovat l'inici de sessió</value>
+  </data>
+  <data name="LogInWithDeviceMustBeSetUpInTheSettingsOfTheBitwardenAppNeedAnotherOption" xml:space="preserve">
+    <value>L'inici de sessió amb el dispositiu ha d'estar activat a la configuració de l'aplicació Bitwarden. Necessiteu una altra opció?</value>
+  </data>
+  <data name="LogInWithDevice" xml:space="preserve">
+    <value>Inici de sessió amb dispositiu</value>
+  </data>
+  <data name="LoggingInOn" xml:space="preserve">
+    <value>Inici de sessió en</value>
   </data>
 </root>
